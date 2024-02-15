@@ -1,0 +1,67 @@
+.container {
+    margin-top: 50px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .canvas-container {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+  }
+  
+  canvas {
+    border: 1px solid #000;
+  } 
+  
+  .info-container {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .info{
+    display: flex;
+    margin-top: 5px;
+  }
+
+  .txt_info{
+    font-weight: bold;
+  }
+  
+  .info-row {
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  .info-row:nth-child(1){
+    margin-left: 0px;
+  }
+  
+  .info-title {
+    font-weight: bold;
+  }
+  
+  .image-actions {
+    margin-top: 20px;
+    display: flex;
+  }
+
+  .canvas_block{
+    justify-content: center;
+    margin-top: 20px;
+  }

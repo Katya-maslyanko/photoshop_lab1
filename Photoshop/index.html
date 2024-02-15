@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редактор изображений</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h4 class="text-center my-4">Редактор изображений</h4>
+    <div class="content">
+      <div class="button_modal_block" style="display: flex; flex-direction: row;">
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+          Загрузка изображения <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5M8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6"/>
+          </svg>
+        </button>
+        <button id="removeBtn" class="btn btn-danger" style="margin-left: 5px;">Удалить</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title fs-5" id="exampleModalLabel">Загрузка изображения</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class=".center-block  modal-body">
+                  <div class="form-group">
+                    <label for="fileInput">Загрузить изображение:</label>
+                    <input type="file" class="form-control-file" id="fileInput">
+                  </div>
+                  <div class="form-group">
+                    <label for="urlInput">URL изображения:</label>
+                    <input type="text" class="form-control" id="urlInput">
+                  </div>
+                  <div class="image-actions">
+                    <button id="submitBtn" data-dismiss="modal" class="btn btn-primary">Отобразить изображение</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="canvas_block">
+        <div class="canvas-container">
+          <canvas id="canvas" width="600" height="460"></canvas>
+        </div>
+        <div class="info-container" id="infoContainer">
+          <h8 class="text-center mb-3 txt_info">Информация о изображении</h8>
+          <div class="info">
+            <div class="info-row">
+              <span class="info-title">Цвет:</span>
+              <span id="colorInfo" class="infoText"></span>
+            </div>
+            <div class="info-row">
+              <span class="info-title">Значения:</span>
+              <span  id="sizeInfo" class="infoText"></span>
+            </div>
+            <div class="info-row">
+              <span class="info-title">Позиция:</span>
+              <span id="positionInfo" class="infoText"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></body>
+  <script src="script.js"></script>
+</html>
+
